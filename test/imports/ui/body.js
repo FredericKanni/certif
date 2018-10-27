@@ -5,6 +5,7 @@ import '../api/Templates.js';
 import './template.js';
 
 import './body.html';
+import { Ateliers } from '../api/Ateliers.js';
 
 
 
@@ -51,17 +52,20 @@ console.log(imageatelier);
 
 
         
-        // Msgs.insert({
+        Ateliers.insert({
     
-        //   nom,
+            nomatelier,
+            descatelier,
+            dateatelier,
+            heureatelier,
+            dureeatelier,
+            dispoatelier,
+            reserveatelier,  
+            prixatelier,
+            imageatelier,  
+            createdAt: new Date(), // current time
     
-        //   desc,
-  
-        //   url,
-    
-        //   createdAt: new Date(), // current time
-    
-        // });      
+        });      
       
       // Clear form
     
@@ -80,3 +84,12 @@ target.champimage.value = '';
     }, 
   
   });
+
+
+
+  Template.body.helpers({
+    ateliers() {
+      return   Ateliers.find().fetch();
+    },
+   
+})
