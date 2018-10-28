@@ -4,7 +4,7 @@
   Créer un nouvel atelier
   </button>
   
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -76,7 +76,7 @@
                     
                         <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary" >Save changes</button>
+                                <button type="submit" class="btn btn-primary"  data-dismiss="modal" >Save changes</button>
                               </div>
                     
                     </form>
@@ -87,6 +87,54 @@
           </div>
         </div>
       </div>
+
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <!-- FORMULAIRE DU MODAL -->
+    
+                <form class=" new-atelier-bis ">
+
+                    <input class="form-control  my-2" type="text" name="title" id="champnombis" placeholder=" helloEntrer le nom de l' atelier" />
+    
+                    <input class="form-control  my-2" type="text" name="text" id="champdescbis" placeholder="Entrer un descriptif" />
+    
+                    <input class="form-control  my-2" type="text" name="date" id="champdatebis" placeholder="Entrer la  date" />
+        
+                    <input class="form-control  my-2" type="text" name="horaire" id="champheurebis" placeholder="Entrer l heure de début" />
+    
+                    <input class="form-control  my-2" type="text" name="duree" id="champdureebis" placeholder="Entrer la duree" />
+        
+                    <input class="form-control  my-2" type="text" name="dispo" id="champdispobis" placeholder="Entrer le nbr de places disponibles" />
+    
+                    <input class="form-control  my-2" type="text" name="reserve" id="champreservebis" placeholder="place reserve" />
+        
+                    <input class="form-control  my-2" type="text" name="prix" id="champprixbis" placeholder="Entrer le prix" />
+    
+                    <input class="form-control  my-2" type="text" name="image" id="champimagebis" placeholder="Entrer une image" /> 
+
+
+                
+                    <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary save" >Save changes</button>
+                            </div>
+                
+                </form>
+                
+                    <!-- /FORMULAIRE DU MODAL -->
+        </div>
+        
+        </div>
+    </div>
+    </div>
   </template>
   
 

@@ -17,7 +17,7 @@ import { Ateliers } from '../api/Ateliers.js';
 Template.body.events({    
 
 
-  
+  //CREATION ATELIER
 //   Recupere le submit du formulaire
     'submit .new-atelier'(event) {      // Prevent default browser form submit
 // empeche la page de s actualiser
@@ -83,6 +83,81 @@ target.champprix.value = '';
 target.champimage.value = ''; 
     
     }, 
+
+
+
+
+    'submit .new-atelier-bis'(event) { 
+        event.preventDefault();
+        console.log( "hello" );
+//         //RECUPERE L OBJET QUI EST LE BUTTON MODIFIER
+//   const target = event.target;
+//   //RECUPERE L ID DE LA CARTE AUQUEL APPARTIENT LE BTN SUR LEQUEL ON VIENT DE VLIQUER
+//   const idMembre = target.getAttribute('data-id');
+//   //RECUPRE L OBJET DANS LA COLLECTION AVEC L ID  DE LA CARTE QU ON VIENT DE RECUPERER
+//   const at = Ateliers.findOne({_id:idMembre});
+
+
+//       // console.log( target );
+//       // console.log( idMembre );
+//       // console.log( at );
+//       // console.log( at.nomatelier );
+
+// //RECUPERE LE CHAMP NOM DU FORMULAIRE DU MODAL //CE FORMULAIRE SE SITUE DANS BODY.HTML
+// const lenom = document.querySelector("#champnombis");
+// //RECUPERE LE CHAMP DESC
+//   const ladesc = document.querySelector("#champdescbis");
+// //RECUPERE LE CHAMP URL
+//   const ladate = document.querySelector("#champdatebis");
+// //RECUPERE LE CHAMP NOM DU FORMULAIRE DU MODAL //CE FORMULAIRE SE SITUE DANS BODY.HTML
+// const lheure = document.querySelector("#champheurebis");
+// //RECUPERE LE CHAMP DESC
+//   const laduree = document.querySelector("#champdureebis");
+// //RECUPERE LE CHAMP URL
+//   const nbrdispo = document.querySelector("#champdispobis");
+// //RECUPERE LE CHAMP NOM DU FORMULAIRE DU MODAL //CE FORMULAIRE SE SITUE DANS BODY.HTML
+// const nbrreserve = document.querySelector("#champreservebis");
+// //RECUPERE LE CHAMP DESC
+//   const leprix = document.querySelector("#champprixbis");
+// //RECUPERE LE CHAMP URL
+//   const limage = document.querySelector("#champimagebis");
+      
+
+//   lenom.value= at.nomatelier;
+//   ladesc.value= at.descatelier;
+//   ladate.value= at.dateatelier;
+//   lheure.value= at.heureatelier;
+//   laduree.value= at.dureeatelier;
+//   nbrdispo.value= at.dispoatelier;
+//   nbrreserve.value= at.reserveatelier;
+//   leprix.value= at.prixatelier;
+//   limage.value= at.imageatelier;
+
+
+//   //recupere les value du formulaire vide pour  linstant
+//       console.log( lenom.value );
+//       // console.log( ladesc.value );
+//       // console.log( ladate.value );
+//       // console.log( lheure.value );
+//       // console.log( laduree.value );
+//       // console.log( nbrdispo.value );
+//       // console.log( nbrreserve.value );
+//       // console.log( leprix.value );
+//       // console.log( limage.value );
+
+
+
+  }
+
+
+
+
+
+
+
+
+
+
   
   });
 
@@ -98,7 +173,7 @@ target.champimage.value = '';
 
 
 Template.carte.events({    
-
+// RECUPERE INFO CARTE POUR FORMULAIRE BIS
     'click .modif': function(event) {
 
           //RECUPERE L OBJET QUI EST LE BUTTON MODIFIER
@@ -115,26 +190,35 @@ Template.carte.events({
         // console.log( at.nomatelier );
 
 //RECUPERE LE CHAMP NOM DU FORMULAIRE DU MODAL //CE FORMULAIRE SE SITUE DANS BODY.HTML
-const lenom = document.querySelector("#champnom");
+const lenom = document.querySelector("#champnombis");
 //RECUPERE LE CHAMP DESC
-    const ladesc = document.querySelector("#champdesc");
+    const ladesc = document.querySelector("#champdescbis");
 //RECUPERE LE CHAMP URL
-    const ladate = document.querySelector("#champdate");
+    const ladate = document.querySelector("#champdatebis");
 //RECUPERE LE CHAMP NOM DU FORMULAIRE DU MODAL //CE FORMULAIRE SE SITUE DANS BODY.HTML
-const lheure = document.querySelector("#champheure");
+const lheure = document.querySelector("#champheurebis");
 //RECUPERE LE CHAMP DESC
-    const laduree = document.querySelector("#champduree");
+    const laduree = document.querySelector("#champdureebis");
 //RECUPERE LE CHAMP URL
-    const nbrdispo = document.querySelector("#champdispo");
+    const nbrdispo = document.querySelector("#champdispobis");
 //RECUPERE LE CHAMP NOM DU FORMULAIRE DU MODAL //CE FORMULAIRE SE SITUE DANS BODY.HTML
-const nbrreserve = document.querySelector("#champreserve");
+const nbrreserve = document.querySelector("#champreservebis");
 //RECUPERE LE CHAMP DESC
-    const leprix = document.querySelector("#champprix");
+    const leprix = document.querySelector("#champprixbis");
 //RECUPERE LE CHAMP URL
-    const limage = document.querySelector("#champimage");
+    const limage = document.querySelector("#champimagebis");
         
 
     lenom.value= at.nomatelier;
+    ladesc.value= at.descatelier;
+    ladate.value= at.dateatelier;
+    lheure.value= at.heureatelier;
+    laduree.value= at.dureeatelier;
+    nbrdispo.value= at.dispoatelier;
+    nbrreserve.value= at.reserveatelier;
+    leprix.value= at.prixatelier;
+    limage.value= at.imageatelier;
+
 
     //recupere les value du formulaire vide pour  linstant
         console.log( lenom.value );
@@ -149,7 +233,21 @@ const nbrreserve = document.querySelector("#champreserve");
 
 
 
-    }
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 })
 
 
