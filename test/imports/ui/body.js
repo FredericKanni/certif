@@ -25,6 +25,8 @@ event.preventDefault();      // Get value from form element
     //recupere la target qui est l objet avec la classe new-atelier
 const target = event.target;
     
+
+
       
 //recupere les informations dans les champ du formulaire modal
 const nomatelier = target.champnom.value;
@@ -89,16 +91,66 @@ target.champimage.value = '';
 
     'submit .new-atelier-bis'(event) { 
         event.preventDefault();
-        console.log( "hello" );
+        // console.log( "hello" );
 //         //RECUPERE L OBJET QUI EST LE BUTTON MODIFIER
-//   const target = event.target;
+   const target = event.target;
 //   //RECUPERE L ID DE LA CARTE AUQUEL APPARTIENT LE BTN SUR LEQUEL ON VIENT DE VLIQUER
-//   const idMembre = target.getAttribute('data-id');
+  // const idMembre = target.getAttribute('data-id');
+
+
+const hidden = document.querySelector("#edit-id");
+  const idcarte =  hidden.value ;
+  console.log( hidden );
+  console.log( idcarte );
 //   //RECUPRE L OBJET DANS LA COLLECTION AVEC L ID  DE LA CARTE QU ON VIENT DE RECUPERER
-//   const at = Ateliers.findOne({_id:idMembre});
+  const at = Ateliers.findOne({_id:idcarte});
+  
+
+//   VALEURS STOCKER DANS LA CARTE
+//   console.log( at );
+//    console.log( at.nomatelier );
+//       console.log( at.descatelier );
+//       console.log( at.dateatelier );
+//       console.log( at.heureatelier );
+//       console.log( at.dureeatelier);
+//       console.log( at.dispoatelier);
+//       console.log( at.reserveatelier );
+//       console.log( at.prixatelier );
+//       console.log( at.imageatelier );
+      
+
+// VALEUR DU FORMULAIRE BIS
+    //   console.log( target );
+    //   console.log( target.title.value );
+    //   console.log( target.text.value );
+    //   console.log( target.date.value );
+    //   console.log( target.horaire.value );
+    //   console.log( target.duree.value );
+    //   console.log( target.dispo.value );
+    //   console.log( target.reserve.value );
+    //   console.log( target.prix.value );
+    //   console.log( target.image.value );
 
 
-//       // console.log( target );
+
+   //JE PREND LA COLLECTION aTELIER et j update l element avec la identifient ici id 
+        //et je change le valeur des parametre souhaiter de cet element
+        Ateliers.update(idcarte, {
+            $set: { 
+
+                nomatelier:target.title.value ,
+                descatelier:target.text.value ,
+                dateatelier:target.date.value ,
+                heureatelier:target.horaire.value ,
+                dureeatelier:target.duree.value ,
+                dispoatelier:target.dispo.value ,
+                reserveatelier:target.reserve.value ,  
+                prixatelier:target.prix.value ,
+                imageatelier:target.image.value , }, 
+
+        });
+
+
 //       // console.log( idMembre );
 //       // console.log( at );
 //       // console.log( at.nomatelier );
@@ -182,6 +234,11 @@ Template.carte.events({
     const idMembre = target.getAttribute('data-id');
     //RECUPRE L OBJET DANS LA COLLECTION AVEC L ID  DE LA CARTE QU ON VIENT DE RECUPERER
     const at = Ateliers.findOne({_id:idMembre});
+
+
+    //recupre id carte recupere hidden et lui attribue lid de la carte 
+    const hidden = document.querySelector("#edit-id");
+    hidden.value = idMembre;
 
 
         // console.log( target );
