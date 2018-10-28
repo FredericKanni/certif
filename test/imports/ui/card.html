@@ -3,8 +3,21 @@
 
 
 <template name="carte">
+        
+        <div class="card carte" style="width: 18rem;">
+            <!-- RAJOUTE DE LA CROIX POUR EFFACER -->
+                <button type="button" class="close delete"  data-toggle="modal" data-target="#exampleModal3"   data-id="{{_id}}">
+                        <span aria-hidden="true">&times;</span>
+                 </button>
 
-        <div class="card" style="width: 18rem;">
+                 <!-- <a href="" type="button" class="btn btn-primary delete" data-toggle="modal"    data-target="#exampleModal3"  data-id="{{_id}}">Delete</a> -->
+
+                 <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                        Créer un nouvel atelier
+                        </button> -->
+
+
+
                 <img class="card-img-top" src="..." alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title"> {{ nomatelier}}</h5>
@@ -19,7 +32,7 @@
                   <p class="card-text"> {{ imageatelier}} </p>
 
 
-                  <a href="#" type="button" class="btn btn-primary modif" data-toggle="modal"    data-target="#exampleModal2"  data-id="{{_id}}">Modifier</a>
+                  <a href="" type="button" class="btn btn-primary modif" data-toggle="modal"    data-target="#exampleModal2"  data-id="{{_id}}">Modifier</a>
 
                   <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                         Créer un nouvel atelier
