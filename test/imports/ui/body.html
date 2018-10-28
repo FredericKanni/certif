@@ -3,14 +3,19 @@
 
   {{> modal}}
   {{> info}}
+        <div class="row">
+            {{#each ateliers}}
+                <div class="col-md-4">
+                    {{> carte}}
+                </div>
+                
 
-  {{#each ateliers}}
+            {{/each}}
+
+        </div>
+
+               
   
+ 
 
-  <p>plop</p>
-  {{ nomatelier}}
-  {{ descatelier}}
-  {{ dateatelier}}
-
-  {{/each}}
 </body>

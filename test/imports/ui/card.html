@@ -1,0 +1,32 @@
+
+
+
+
+<template name="carte">
+
+        <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title"> {{ nomatelier}}</h5>
+                  
+                  <p class="card-text">  {{ descatelier}}</p>
+                  <p class="card-text"> {{ dateatelier}} </p>
+                  <p class="card-text">    {{ heureatelier}} </p>
+                  <p class="card-text">   {{ heureatelier}}</p>
+                  <p class="card-text"> {{ dispoatelier}} </p>
+                  <p class="card-text">   {{ reserveatelier}} </p>
+                  <p class="card-text">  {{ prixatelier}} </p>
+                  <p class="card-text"> {{ imageatelier}} </p>
+
+
+                  <a href="#" type="button" class="btn btn-primary modif" data-toggle="modal"    data-target="#exampleModal"  data-id="{{_id}}">Modifier</a>
+
+                  <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                        Créer un nouvel atelier
+                        </button> -->
+
+                </div>
+              </div>
+
+
+</template>
